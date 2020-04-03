@@ -1,6 +1,6 @@
 {
   "manifest_version": 2,
-  "name": "Disable keyboard shortcuts",
+  "name": "Disable keyboard shortcuts forked",
   "version": "1.0.0",
   "description": "Disable arbitrary keyboard shortcuts",
   "icons": {
@@ -13,7 +13,12 @@
     "scripts" : ["background.js"]
   },
   "commands": {
-    "do-nothing0": { "description": "Do nothing" },
+    "ctrl-p": { 
+      "suggested_key": {
+        "default": "Ctrl+P"
+      },
+      "description": "Hijack ctrl-p" 
+    },
     "do-nothing1": { "description": "Do nothing" },
     "do-nothing2": { "description": "Do nothing" },
     "do-nothing3": { "description": "Do nothing" },

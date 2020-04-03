@@ -12,4 +12,21 @@
 // License for the specific language governing permissions and limitations under
 // the License.
 
-chrome.commands.onCommand.addListener(function(command) {});
+chrome.commands.onCommand.addListener(function(command) {
+  console.log(command);
+  if (command === "ctrl-p") {
+    var event = {
+      key: "p",
+      ctrlKey: true,
+      shiftKey: false,
+      altKey: false,
+      metaKey: false,
+      repeat: false,
+      isComposing: false,
+      charCode: 0,
+      keyCode: 80
+    }
+    var keyEvent = new KeyboardEvent("keydown", event);
+    window.term.textarea.dispatchEvent(keyEvent);
+  }
+});
