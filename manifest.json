@@ -17,7 +17,19 @@
       "suggested_key": {
         "default": "Ctrl+P"
       },
-      "description": "Hijack ctrl-p" 
+      "description": "ctrl-p" 
+    },
+    "ctrl-n": { 
+      "suggested_key": {
+        "default": "Ctrl+N"
+      },
+      "description": "ctrl-n" 
+    },
+    "ctrl-t": { 
+      "suggested_key": {
+        "default": "Ctrl+T"
+      },
+      "description": "ctrl-t" 
     },
     "do-nothing1": { "description": "Do nothing" },
     "do-nothing2": { "description": "Do nothing" },

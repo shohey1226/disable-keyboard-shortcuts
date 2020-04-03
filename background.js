@@ -14,8 +14,9 @@
 
 chrome.commands.onCommand.addListener(function(command) {
   console.log(command);
+  var event = {};
   if (command === "ctrl-p") {
-    var event = {
+    event = {
       key: "p",
       ctrlKey: true,
       shiftKey: false,
@@ -25,8 +26,32 @@ chrome.commands.onCommand.addListener(function(command) {
       isComposing: false,
       charCode: 0,
       keyCode: 80
-    }
-    var keyEvent = new KeyboardEvent("keydown", event);
-    window.term.textarea.dispatchEvent(keyEvent);
+    };
+  } else if (command === "ctrl-n") {
+    event = {
+      key: "n",
+      ctrlKey: true,
+      shiftKey: false,
+      altKey: false,
+      metaKey: false,
+      repeat: false,
+      isComposing: false,
+      charCode: 0,
+      keyCode: 78
+    };
+  } else if (command === "ctrl-t") {
+    event = {
+      key: "t",
+      ctrlKey: true,
+      shiftKey: false,
+      altKey: false,
+      metaKey: false,
+      repeat: false,
+      isComposing: false,
+      charCode: 0,
+      keyCode: 84
+    };
   }
+  var keyEvent = new KeyboardEvent("keydown", event);
+  window.term.textarea.dispatchEvent(keyEvent);
 });
