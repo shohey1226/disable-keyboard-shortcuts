@@ -13,45 +13,75 @@
 // the License.
 
 chrome.commands.onCommand.addListener(function(command) {
-  console.log(command);
-  var event = {};
-  if (command === "ctrl-p") {
-    event = {
-      key: "p",
-      ctrlKey: true,
-      shiftKey: false,
-      altKey: false,
-      metaKey: false,
-      repeat: false,
-      isComposing: false,
-      charCode: 0,
-      keyCode: 80
-    };
-  } else if (command === "ctrl-n") {
-    event = {
-      key: "n",
-      ctrlKey: true,
-      shiftKey: false,
-      altKey: false,
-      metaKey: false,
-      repeat: false,
-      isComposing: false,
-      charCode: 0,
-      keyCode: 78
-    };
-  } else if (command === "ctrl-t") {
-    event = {
-      key: "t",
-      ctrlKey: true,
-      shiftKey: false,
-      altKey: false,
-      metaKey: false,
-      repeat: false,
-      isComposing: false,
-      charCode: 0,
-      keyCode: 84
-    };
-  }
-  var keyEvent = new KeyboardEvent("keydown", event);
-  window.term.textarea.dispatchEvent(keyEvent);
+  //console.log(command);
+  //var event = {};
+  //if (command === "ctrl-p") {
+  //  event = {
+  //    key: "p",
+  //    ctrlKey: true,
+  //    shiftKey: false,
+  //    altKey: false,
+  //    metaKey: false,
+  //    repeat: false,
+  //    isComposing: false,
+  //    charCode: 0,
+  //    keyCode: 80
+  //  };
+  //} else if (command === "ctrl-n") {
+  //  event = {
+  //    key: "n",
+  //    ctrlKey: true,
+  //    shiftKey: false,
+  //    altKey: false,
+  //    metaKey: false,
+  //    repeat: false,
+  //    isComposing: false,
+  //    charCode: 0,
+  //    keyCode: 78
+  //  };
+  //} else if (command === "ctrl-t") {
+  //  event = {
+  //    key: "t",
+  //    ctrlKey: true,
+  //    shiftKey: false,
+  //    altKey: false,
+  //    metaKey: false,
+  //    repeat: false,
+  //    isComposing: false,
+  //    charCode: 0,
+  //    keyCode: 84
+  //  };
+  //}
+// https://stackoverflow.com/questions/17567624/pass-a-parameter-to-a-content-script-injected-using-chrome-tabs-executescript 
+ chrome.tabs.executeScript(null, {
+   code: `var command = "${command}"`
+ }, function(){
+   chrome.tabs.executeScript(
+     null,
+     {file: "content.js"}
+     //function(results){
+     //  console.log(result)
+     //}
+   );
+ });
+  //chrome.tabs.executeScript(
+  //  null,
+  //  {code: "var x = " + JSON.stringify(document.) + "; x"}, 
+  //  function(result){
+  //     var event = {
+  //       key: "n",
+  //       ctrlKey: true,
+  //       shiftKey: false,
+  //       altKey: false,
+  //       metaKey: false,
+  //       repeat: false,
+  //       isComposing: false,
+  //       charCode: 0,
+  //       keyCode: 78
+  //     };
+  //    console.log(result);
+  //    var keyEvent = new KeyboardEvent('keydown', event); 
+  //    //document.dispatchEvent(keyEvent);
+  //    //alert(result[0])
+  //  });
 });
