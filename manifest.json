@@ -1,46 +1,31 @@
 {
   "manifest_version": 2,
-  "name": "Disable keyboard shortcuts forked",
+  "name": "Wazaterm - disable keyboard shortcuts",
   "version": "1.0.0",
-  "description": "Disable arbitrary keyboard shortcuts",
+  "description": "Disable default browser keyboard shortcuts to use terminal",
   "icons": {
     "48": "icon48.png",
     "128": "icon128.png"
   },
-  "author": "Benjamin Barenblat <bbaren@google.com>",
-  "permissions": ["tabs", "http://r32.wazaterm.com:5000/*/*", "https://www.wazaterm.com/*/*"],
+  "author": "Shohei Kameda <shoheik@cpan.org>",
+  "permissions": ["tabs", "https://www.wazaterm.com/*/*"],
   "background": {
     "persistent": false,
     "scripts" : ["background.js"]
   },
   "commands": {
-    "ctrl-p": { 
-      "suggested_key": {
-        "default": "Ctrl+P"
-      },
-      "description": "ctrl-p" 
-    },
     "ctrl-n": { 
       "suggested_key": {
         "default": "Ctrl+N"
       },
-      "description": "ctrl-n" 
+      "description": "Disable ctrl-n" 
     },
     "ctrl-t": { 
       "suggested_key": {
         "default": "Ctrl+T"
       },
-      "description": "ctrl-t" 
-    },
-    "do-nothing1": { "description": "Do nothing" },
-    "do-nothing2": { "description": "Do nothing" },
-    "do-nothing3": { "description": "Do nothing" },
-    "do-nothing4": { "description": "Do nothing" },
-    "do-nothing5": { "description": "Do nothing" },
-    "do-nothing6": { "description": "Do nothing" },
-    "do-nothing7": { "description": "Do nothing" },
-    "do-nothing8": { "description": "Do nothing" },
-    "do-nothing9": { "description": "Do nothing" }
+      "description": "Disable ctrl-t" 
+    }
   },
   "minimum_chrome_version": "33"
 }
