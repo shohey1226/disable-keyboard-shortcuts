@@ -4,8 +4,7 @@
   "version": "1.0.0",
   "description": "Disable default browser keyboard shortcuts to use terminal",
   "icons": {
-    "48": "icon48.png",
-    "128": "icon128.png"
+    "128": "icon.png"
   },
   "author": "Shohei Kameda <shoheik@cpan.org>",
   "permissions": ["tabs", "https://www.wazaterm.com/*/*"],
