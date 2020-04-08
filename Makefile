@@ -14,7 +14,7 @@
 
 NAME = disable_keyboard_shortcuts
 
-FILES = background.js manifest.json icon128.png icon48.png
+FILES = background.js manifest.json icon.png content.js
 
 $(NAME).zip: $(FILES)
 	mkdir $(NAME)
