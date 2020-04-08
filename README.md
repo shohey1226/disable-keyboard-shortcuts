@@ -1,6 +1,9 @@
-# Disable Keyboard Shortcuts
+# Wazaterm extenstion to disable default shortcuts
 
-This Chrome extension lets you set keyboard shortcuts to do nothing. Just head
-on over to chrome://extensions/shortcuts and assign away!
+ctrl-t, ctrl-n are browser default shortcuts and terminal requires these keys.
 
-This is not an official Google product.
+## How to usee
+
+1. Open chrome://extensions/shortcuts
+2. Add CTRL + N and CTRL + T in the lines 
+3. Go to [Wazaterm](https://www.wazaterm.com)
