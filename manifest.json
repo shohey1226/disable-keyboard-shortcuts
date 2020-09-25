@@ -9,7 +9,7 @@
     "128": "icon128.png"
   },
   "author": "Shohei Kameda <shoheik@cpan.org>",
-  "permissions": ["tabs", "https://www.wazaterm.com/*/*"],
+  "permissions": ["tabs", "https://*.wazaterm.com/*"],
   "background": {
     "persistent": false,
     "scripts" : ["background.js"]
