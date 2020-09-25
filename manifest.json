@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Wazaterm - disable default shortcuts",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Disable default browser keyboard shortcuts to use terminal",
   "icons": {
     "16": "icon16.png",
@@ -9,7 +9,7 @@
     "128": "icon128.png"
   },
   "author": "Shohei Kameda <shoheik@cpan.org>",
-  "permissions": ["tabs", "https://*.wazaterm.com/*"],
+  "permissions": ["tabs", "https://*.wazaterm.com/*", "*://terminal/*"],
   "background": {
     "persistent": false,
     "scripts" : ["background.js"]
